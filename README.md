@@ -1,6 +1,4 @@
-### Assignment
-
-In this project, you will visualize and make calculations from medical examination data using matplotlib, seaborn, and pandas. The dataset values were collected during medical examinations.
+In this project, we visualize and make calculations from medical examination data using matplotlib, seaborn, and pandas. The dataset values were collected during medical examinations.
 
 #### Data description
 
@@ -22,35 +20,40 @@ File name: medical_examination.csv
 | Alcohol intake | Subjective Feature | alco | binary |
 | Physical activity | Subjective Feature | active | binary |
 | Presence or absence of cardiovascular disease | Target Variable | cardio | binary |
+---
+### To-do
+Nothing! Everything is done yay!
 
-#### Tasks
+---
+### Doing
+- [ ] Adding more visualization features.
 
-Create a chart similar to `examples/Figure_1.png`, where we show the counts of good and bad outcomes for cholesterol, gluc, alco variable, active, and smoke for patients with cardio=1 and cardio=0 in different panels.
+---
+### Done
+Use the data to answer and complete the following tasks in `medical_data_visualizer.py`:
 
-Use the data to complete the following tasks in `medical_data_visualizer.py`:
-* Add an 'overweight' column to the data. To determine if a person is overweight, first calculate their BMI by dividing their weight in kilograms by the square of their height in meters. If that value is > 25 then the person is overweight. Use the value 0 for NOT overweight and the value 1 for overweight.
-* Normalize data by making 0 always good and 1 always bad. If the value of 'cholestorol' or 'gluc' is 1, make the value 0. If the value is more than 1, make the value 1.
-* Convert the data into long format and create a chart that shows the value counts of the categorical features using seaborn's `catplot()`. The dataset should be split by 'Cardio' so there is one chart for each 'cardio' value. The chart should look like "examples/Figure_1.png".
-* Clean the data. Filter out the following patient segments that represent incorrect data:
-  - diastolic pressure is higher then systolic (Keep the correct data with `df['ap_lo'] <= df['ap_hi'])`)
-  - height is less than the 2.5th percentile (Keep the correct data with `(df['height'] >= df['height'].quantile(0.025))`)
-  - height is more than the 97.5th percentile
-  - weight is less then the 2.5th percentile
-  - weight is more than the 97.5th percentile
-* Create a correlation matrix using the dataset. Plot the correlation matrix using seaborn's `heatmap()`. Mask the upper triangle. The chart should look like "examples/Figure_2.png".
+- [X] Create a chart where we show the counts of good and bad outcomes for cholesterol, gluc, alco variable, active, and smoke for patients with cardio=1 and cardio=0 in different panels.
 
-Any time a variable is set to 'None', make sure to set it to the correct code.
+- [X] Add an 'overweight' column to the data. To determine if a person is overweight, first calculate their BMI by dividing their weight in kilograms by the square of their height in meters. If that value is > 25 then the person is overweight. Use the value 0 for NOT overweight and the value 1 for overweight.
+- [X] Normalize data by making 0 always good and 1 always bad. If the value of 'cholestorol' or 'gluc' is 1, make the value 0. If the value is more than 1, make the value 1.
+- [X] Convert the data into long format and create a chart that shows the value counts of the categorical features using seaborn's `catplot()`. The dataset should be split by 'Cardio' so there is one chart for each 'cardio' value. The chart should look like "examples/Figure_1.png".
+- [X] Clean the data. Filter out the following patient segments that represent incorrect data:
+  - [X] diastolic pressure is higher then systolic (Keep the correct data with `df['ap_lo'] <= df['ap_hi'])`)
+  - [X] height is less than the 2.5th percentile (Keep the correct data with `(df['height'] >= df['height'].quantile(0.025))`)
+  - [X] height is more than the 97.5th percentile
+  - [x] weight is less then the 2.5th percentile
+  - [X] weight is more than the 97.5th percentile
+- [X] Create a correlation matrix using the dataset. Plot the correlation matrix using seaborn's `heatmap()`. Mask the upper triangle. The chart should look like "examples/Figure_2.png".
 
-Unit tests are written for you under `test_module.py`.
+Unit tests are written under `test_module.py`.
+
+---
 
 ### Development
 
-For development, you can use `main.py` to test your functions. Click the "run" button and `main.py` will run.
+For development, you can use `main.py` to test functions. Just execute `main.py` script from terminal and it should run.
 
 ### Testing 
 
-We imported the tests from `test_module.py` to `main.py` for your convenience. The tests will run automatically whenever you hit the "run" button.
+Tests from `test_module.py` to `main.py` for convenience. The tests will run automatically whenever `main.py` is run.
 
-### Submitting
-
-Copy your project's URL and submit it to freeCodeCamp.
