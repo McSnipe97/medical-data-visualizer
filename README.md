@@ -2,7 +2,7 @@ In this project, we visualize and make calculations from medical examination dat
 
 #### Data description
 
-The rows in the dataset represent patiets and the columns represent information like body measurements, results from various blood tests, and lifestyle choices. You will use the dataset to exploring the relationship between cardiac disease, body measurements, blood markers, and lifestyle choices.
+The rows in the dataset represent patiets and the columns represent information like body measurements, results from various blood tests, and lifestyle choices. We will use the dataset to exploring the relationship between cardiac disease, body measurements, blood markers, and lifestyle choices.
 
 File name: medical_examination.csv
 
